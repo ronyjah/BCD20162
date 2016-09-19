@@ -7,7 +7,7 @@ create table aluno(
 
 
 create table Campus (
-     nome   varchar(128),
+     nome   varchar(128) primary key,
 );
 
 create table curso(
@@ -28,7 +28,7 @@ create table curso(
 
 create table matricula(
     nome varchar(100) not null,
-    aluno char(11)
+    aluno char(11),
     numero char(10) prymary key,
     
     constraint fk_matricula_curso_curso_numero,
