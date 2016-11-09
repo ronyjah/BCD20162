@@ -1,17 +1,3 @@
-CREATE TABLE IF NOT EXISTS horario(
-	id smallint unsigned auto_increment primary key,
-	disciplina smallint unsigned not null,
-	semestre smallint unsigned not null,
-    inicio time not null,
-    termino time not null,
-    dia smallint not null,
-	constraint fk_horario_disciplina_disciplina_id
-    	foreign key(disciplina) references disciplina(id),
-	constraint fk_horario_semestre_semestre_id
-    	foreign key(semestre) references semestre(id)
-);
-
-
 desc horario;
 insert into horario(disciplina, semeste, inicio,termino,dia)
     	values
